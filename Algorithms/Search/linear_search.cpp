@@ -16,15 +16,16 @@ const int SIZE = 10;
 int main()
 {
 	std::vector<int> vec;
+
 	for (size_t i = 0; i < SIZE; i++)
 	{
-		int temp = 1 + rand() / (RAND_MAX + 1);
+		int temp = 1 + (int)20 * rand() / (RAND_MAX + 1);
 		vec.push_back(temp);
 	} 
 
 	for (size_t i = 0; i < SIZE; i++)
 	{
-		std::cout << i << " " << vec[i];
+		std::cout <<  vec[i]<<" " ;
 	}
 	std::cout << std::endl;
 
@@ -37,7 +38,7 @@ int main()
 		{
 			if_finded = true;
 			std::cout << "The number " << to_find << " is in the vector, its idx is "
-				<< i << ".\n";
+				<< i + 1 << ".\n";
 		}
 	}	
 	
