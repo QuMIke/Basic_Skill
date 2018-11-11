@@ -54,6 +54,11 @@ int ternary_search_recursion(T1& data, int left, int right, T2& key)
 	int mid1 = left + (right - left) / 3;
 	int mid2 = right - (right - left) / 3;
 
+	if(mid1 > mid2)
+	{	
+		return -1;
+	}
+	
 	if (data[mid1] == key)
 	{
 		return mid1;
